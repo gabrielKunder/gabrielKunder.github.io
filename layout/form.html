@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Campañas Ripley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Css -->
+  <link href="css/style_campaign.css" rel="stylesheet">
+</head>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<body>
+  <mini-site>
+    <main>
+      <section id="campaign-image">
+        <img src="assets/campaign-image.jpg" width="990" height="210" class="desktop" />
+        <img src="assets/campaign-image-mobile.jpg" width="360" height="185" class="mobile" />
+      </section>
+      <section id="campaign-form">
+        <header class="title container">
+          <h1>¡Solo por Abril! <b>Doble Puntaje</b> en todas tus compras en Supermercados</h1>
+          <p>Pagando con tu <b>Tarjeta Ripley Mastercard</b> en todos los Supermercados</p>
+        </header>
+        <div>
+          <h3>Inscríbete aquí</h3>
+          <form>
+            <div class="row">
+              <div class="col">
+                <label>R.U.T</label>
+              </div>
+              <div class="col">
+                <input placeholder="12.345.678-9" />
+                <span class="error-msg">Tu rut no es válido</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>Nombres</label>
+              </div>
+              <div class="col">
+                <input/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>Apellidos</label>
+              </div>
+              <div class="col">
+                <input/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>Teléfono</label>
+              </div>
+              <div class="col">
+                <input placeholder="12345678" class="with-fixed-placeholder"/>
+                <span class="fixed-placeholder">+56 9</span>
+                <span class="error-msg">Tu teléfono no es válido</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>E-mail</label>
+              </div>
+              <div class="col">
+                <input placeholder="nombre@mail.com" />
+                <span class="error-msg">Tu e-mail no es válido</span>
+              </div>
+            </div>
+            <div class="row extra-margin-row">
+              <div class="col">
+                <label>¿Eres un robot?</label>
+              </div>
+              <div class="g-recaptcha" data-sitekey="6LcNGE8UAAAAAIx1cliIKbzssvKhK3n8MuNTiT6-"></div>
+            </div>
+            <div class="row conditions">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox">Acepto que mi información sea utilizada para enviarme promociones.</label>
+            </div>
+            <div class="row">
+              <button type="button" class="btn red-btn">Enviar</button>
+            </div>
+            <p class="legal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare quam lacus. Ut iaculis nisl sed neque imperdiet, sit amet eleifend lectus condimentum. Vivamus viverra velit semper urna efficitur, vel pellentesque tortor bibendum. Aliquam vitae sem et enim tempor fermentum.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div class="brand-line">
+      <div class="red-bar"></div>
+      <div class="yellow-bar"></div>
+      <div class="pink-bar"></div>
+    </div>
+  </mini-site>
+</body>
+</html>
+  
+  

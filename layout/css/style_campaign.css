@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "montserratlight";
+  src: url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg"), url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "montserratregular";
+  src: url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg"), url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "montserratmedium";
+  src: url("../fonts/montserrat-medium-webfont.svg#montserratmedium") format("svg"), url("../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../fonts/montserrat-medium-webfont.woff") format("woff"), url("../fonts/montserrat-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "montserratsemibold";
+  src: url("../fonts/montserrat-semibold-webfont.svg#montserratsemibold") format("svg"), url("../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat-semibold-webfont.woff") format("woff"), url("../fonts/montserrat-semibold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "montserratbold";
+  src: url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg"), url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "montserratextrabold";
+  src: url("../fonts/montserrat-extrabold-webfont.svg#montserratextrabold") format("svg"), url("../fonts/montserrat-extrabold-webfont.woff2") format("woff2"), url("../fonts/montserrat-extrabold-webfont.woff") format("woff"), url("../fonts/montserrat-extrabold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  position: relative;
+  padding-bottom: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+button {
+  background-color: transparent; }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+b {
+  font-weight: normal;
+  font-family: "montserratbold"; }
+
+a, a:hover {
+  text-decoration: none; }
+
+.btn {
+  padding: 15px 20px;
+  font: 13.5px "montserratsemibold"; 
+  color: white;
+  border-radius: 0;
+  box-shadow: 0 2px 10px 0 rgba(164, 164, 164, 0.5);
+  min-width: 230px;
+  display: block;
+  border: 0; }
+  .btn:focus, .btn:hover {
+    box-shadow: 0 2px 11px 0 rgba(164, 164, 164, 0.75); }
+  @media only screen and (max-width: 576px) {
+    .btn {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto; } }
+
+.red-btn {
+  background: #e22d36; }
+.red-btn:hover {
+  background: #f8414b; }
+
+.brand-line {
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
+.brand-line .red-bar, .brand-line .yellow-bar, .brand-line .pink-bar {
+  height: 8px;
+  display: inline-block;
+  float: left; }
+.brand-line .red-bar {
+  background: #e22d36;
+  width: 50%; }
+.brand-line .yellow-bar {
+  background: #f2ad4b;
+  width: 15%; }
+.brand-line .pink-bar {
+  background: #894590;
+  width: 35%; }
+
+#campaign-image img{
+  width: 100%;
+  height: auto; }
+#campaign-image .desktop{
+  display: block;}
+  #campaign-image .mobile{
+  display: none;}
+@media only screen and (max-width: 576px) {
+  #campaign-image .desktop{
+    display: none;}
+  #campaign-image .mobile{
+    display: block;} }
+
+#campaign-form header.title {
+margin: 35px 0; }
+#campaign-form h1 {
+font: 19.5px "montserratregular";
+color: #4f2d7f; }
+#campaign-form h1 b {
+  color: #4f2d7f; }
+@media only screen and (max-width: 576px) {
+  #campaign-form h1 {
+    font: 17.5px "montserratregular"; } }
+#campaign-form p {
+  font: 14.5px "montserratregular";
+  color: #333333;
+  margin: 20px 0 10px; }
+@media only screen and (max-width: 576px) {
+  #campaign-form p {
+    font: 13.5px "montserratregular"; } }
+#campaign-form {
+  width: 90%;
+  margin: 0 auto; }
+#campaign-form .row {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 5px; }
+#campaign-form .extra-margin-row {
+  margin-top: 30px; }
+#campaign-form .col {
+  display: inline-block;
+  float: left;
+  position: relative; }
+#campaign-form .col:first-of-type {
+    width: 20%;
+    margin-right: 5%; }
+#campaign-form .col:last-of-type {
+   width: 75%; }
+@media only screen and (max-width: 580px) {
+  #campaign-form .col {
+    display: block; }
+  #campaign-form .col:first-of-type {
+    width: 100%;
+    margin-right: 0; }
+  #campaign-form .col:last-of-type {
+    width: 100%; } }
+#campaign-form .fixed-placeholder {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 40px;
+  font: 13.5px "montserratmedium";
+  color: #97999b; }
+#campaign-form h3 {
+  font: 16.5px "montserratsemibold";
+  color: #4F2D7F;
+  margin: 10px 0 20px; }
+#campaign-form input[type=radio] {
+  display: none; }
+#campaign-form input[type=radio] + label {
+  display: block;
+  font: 13.5px "montserratsemibold";
+  color: #97999b;
+  padding: 3px 0 3px 20px;
+  margin-bottom: 5px;
+  border-left: 3px solid #d0d0d0;
+  cursor: pointer; }
+#campaign-form input[type=radio] + label:hover {
+  color: #636363;
+  border-left: 3px solid #97999b; }
+@media only screen and (max-width: 767px) {
+  #campaign-form input[type=radio] + label:nth-of-type(1) {
+    margin-top: 15px; } }
+#campaign-form input[type=radio]:checked + label {
+  font: 13.5px "montserratbold";
+  border-left: 3px solid #894590;
+  color: #894590; }
+#campaign-form input {
+  font: 13.5px "montserratmedium";
+  color: #4c4c4c;
+  padding: 5px 0 10px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #d0d0d0;
+  width: 100%;
+  max-width: 395px; }
+#campaign-form input.with-fixed-placeholder {
+  padding: 5px 0 10px 42px;
+  width: calc(100% - 42px);
+  max-width: 353px; }
+#campaign-form input:focus {
+  font: 13.5px "montserratsemibold";
+  border-bottom: 1px solid #4f2d7f; }
+#campaign-form input::-webkit-input-placeholder {
+  color: #d0d0d0; }
+#campaign-form input::-moz-placeholder {
+  color: #d0d0d0; }
+#campaign-form input:-ms-input-placeholder {
+  color: #d0d0d0; }
+#campaign-form input:-moz-placeholder {
+  color: #d0d0d0; }
+#campaign-form label {
+  font: 13.5px "montserratsemibold";
+  color: #333333;
+  padding: 5px 0;
+  display: block; }
+#campaign-form .error-msg {
+  color: #e22d36;
+  position: absolute;
+  bottom: -17px;
+  left: 2px;
+  font: 11px "montserratsemibold";
+  text-align: left; }
+@media only screen and (max-width: 930px) {
+  #campaign-form .error-msg {
+    left: 2px; } }
+#campaign-form .btn {
+  float: left;
+  cursor: pointer; }
+#campaign-form input[type=checkbox]{
+  float: left;
+  display: none;
+  cursor: pointer; }
+#campaign-form input + label{
+  display: inline-block;
+  font: 12.5px "montserratmedium";
+  color: #636363;
+  padding-left: 30px;
+  height: 15px;
+  background: url("../assets/unchecked.svg") no-repeat left center;
+  cursor: pointer; }
+#campaign-form input[type=checkbox]:checked + label{
+  background: url("../assets/checked.svg") no-repeat left center; }
+@media only screen and (max-width: 720px) {
+  #campaign-form .btn {
+    float: none; } }
+#campaign-message {
+  width: 90%;
+  max-width: 650px;
+  margin: 20px auto 40px;
+  text-align: center; }
+#campaign-message .i-confetti {
+  width: 65px;
+  height: 65px;
+  background: url('../assets/confetti.svg') no-repeat center;
+  margin: 50px auto 20px;
+  display: block; }
+#campaign-message h1 {
+  font: 16.5px "montserratsemibold";
+  max-width: 450px;
+  margin: 0 auto 20px;
+  color: #4F2D7F; }
+#campaign-message p {
+  font: 12.5px "montserratmedium";
+  line-height: 20px;
+  max-width: 450px;
+  margin: 0 auto 60px;
+  color: #636363; }
+#campaign-message a {
+  font: 13.5px "montserratsemibold";
+  max-width: 450px;
+  margin: 0 auto 20px;
+  color: #894590; }
+#campaign-message a:hover {
+  color: #4F2D7F; }
+#campaign-form .legal, #campaign-message .legal {
+  font: 10.5px "montserratmedium";
+  line-height: 17px;
+  color: #636363;
+  max-width: 750px;
+  text-align: left;
+  margin: 20px 0 40px; }

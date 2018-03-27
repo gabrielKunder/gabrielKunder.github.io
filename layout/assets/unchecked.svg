@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Material/Light/Checkbox-off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-5.000000, -5.000000)" opacity="0.54">
+        <path d="M18.3333333,6.66666667 L18.3333333,18.3333333 L6.66666667,18.3333333 L6.66666667,6.66666667 L18.3333333,6.66666667 L18.3333333,6.66666667 Z M18.3333333,5 L6.66666667,5 C5.75,5 5,5.75 5,6.66666667 L5,18.3333333 C5,19.25 5.75,20 6.66666667,20 L18.3333333,20 C19.25,20 20,19.25 20,18.3333333 L20,6.66666667 C20,5.75 19.25,5 18.3333333,5 L18.3333333,5 L18.3333333,5 Z" id="Shape" fill="#010101"></path>
+    </g>
+</svg>
