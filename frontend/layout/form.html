@@ -5,9 +5,16 @@
   <title>Campañas Ripley</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- Css -->
+  <mini-site-styles>
   <link href="css/style_campaign.css" rel="stylesheet">
+  </mini-site-styles>
 </head>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<mini-site-scripts>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src='js/jquery.js'></script>
+  <script src='js/jquery.form.js'></script>
+
+</mini-site-scripts>
 <body>
   <mini-site>
     <main>
@@ -22,7 +29,7 @@
         </header>
         <div>
           <h3>Inscríbete aquí</h3>
-          <form>
+          <form id="form">
             <div class="row">
               <div class="col">
                 <label>R.U.T</label>
@@ -71,14 +78,14 @@
               <div class="col">
                 <label>¿Eres un robot?</label>
               </div>
-              <div class="g-recaptcha" data-sitekey="6LcNGE8UAAAAAIx1cliIKbzssvKhK3n8MuNTiT6-"></div>
+              <!--<div class="g-recaptcha" data-sitekey="6LcNGE8UAAAAAIx1cliIKbzssvKhK3n8MuNTiT6-"></div>-->
             </div>
             <div class="row conditions">
               <input type="checkbox" id="checkbox">
               <label for="checkbox">Acepto que mi información sea utilizada para enviarme promociones.</label>
             </div>
             <div class="row">
-              <button type="button" class="btn red-btn">Enviar</button>
+              <button type="submit" class="btn red-btn">Enviar</button>
             </div>
             <p class="legal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare quam lacus. Ut iaculis nisl sed neque imperdiet, sit amet eleifend lectus condimentum. Vivamus viverra velit semper urna efficitur, vel pellentesque tortor bibendum. Aliquam vitae sem et enim tempor fermentum.</p>
           </form>
@@ -92,6 +99,22 @@
     </div>
   </mini-site>
 </body>
+
+<script>
+    $('#form').submit(function(){
+        $.ajax({
+            url: 'post.php',
+            type: 'POST',
+            data : $('#form').serialize(),
+            success: function(data){
+                console.log(data);
+            }, error: function(error){
+                console.log(error);
+            }
+        });
+        event.preventDefault();
+    });
+</script>
 </html>
   
   
