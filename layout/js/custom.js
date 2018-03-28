@@ -83,6 +83,12 @@ $("#email").on("change keyup", function(){
     }
 });
 
+$(".recaptcha-checkbox").trigger('attribute-change');
+
+$(".recaptcha-checkbox").on('attribute-change', function(){
+    validate();
+});
+
 $("#checkbox").on("change", function(){
     validate();
 });
