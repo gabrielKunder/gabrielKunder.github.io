@@ -49,15 +49,19 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+html{
+  height: 100%; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
+  min-height: 100%;
   line-height: 1;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -96,7 +100,7 @@ a, a:hover {
 
 .btn {
   padding: 15px 20px;
-  font: 13.5px "montserratsemibold"; 
+  font: 13.5px "montserratsemibold";
   color: white;
   border-radius: 0;
   box-shadow: 0 2px 10px 0 rgba(164, 164, 164, 0.5);
@@ -110,9 +114,13 @@ a, a:hover {
       width: 100%;
       max-width: 300px;
       margin: 0 auto; } }
-
+.hide-item{
+  display: none;
+}
 .red-btn {
   background: #e22d36; }
+.grey-btn {
+  background: gray; }
 .red-btn:hover {
   background: #f8414b; }
 

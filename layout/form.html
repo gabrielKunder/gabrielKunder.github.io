@@ -9,12 +9,14 @@
   <link href="css/style_campaign.css" rel="stylesheet">
   </mini-site-styles>
 </head>
+
 <mini-site-scripts>
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src='js/jquery.js'></script>
   <script src='js/jquery.form.js'></script>
-
+  <script src='js/jquery.rut.js'></script>
 </mini-site-scripts>
+
 <body>
   <mini-site>
     <main>
@@ -24,19 +26,20 @@
       </section>
       <section id="campaign-form">
         <header class="title container">
-          <h1>¡Solo por Abril! <b>Doble Puntaje</b> en todas tus compras en Supermercados</h1>
-          <p>Pagando con tu <b>Tarjeta Ripley Mastercard</b> en todos los Supermercados</p>
+          <h1>¡Sólo por Abril! <b>Doble Puntaje</b> en todas tus compras en Supermercados.</h1>
+          <p>Pagando con tu <b>Tarjeta Ripley Mastercard</b> en todos los Supermercados.</p>
         </header>
         <div>
           <h3>Inscríbete aquí</h3>
           <form id="form">
+            <input class="hide-item" name="campaign_id" id="campaign_id" />
             <div class="row">
               <div class="col">
                 <label>R.U.T</label>
               </div>
               <div class="col">
-                <input placeholder="12.345.678-9" />
-                <span class="error-msg">Tu rut no es válido</span>
+                <input type="text" placeholder="12.345.678-9" name="rut" id="rut" maxlength="12"/>
+                <span class="error-msg hide-item" id="errorRut">Tu rut no es válido</span>
               </div>
             </div>
             <div class="row">
@@ -44,7 +47,7 @@
                 <label>Nombres</label>
               </div>
               <div class="col">
-                <input/>
+                <input type="text" name="first_name" id="first_name" maxlength="50"/>
               </div>
             </div>
             <div class="row">
@@ -52,7 +55,7 @@
                 <label>Apellidos</label>
               </div>
               <div class="col">
-                <input/>
+                <input type="text" name="last_name" id="last_name" maxlength="50"/>
               </div>
             </div>
             <div class="row">
@@ -60,9 +63,9 @@
                 <label>Teléfono</label>
               </div>
               <div class="col">
-                <input placeholder="12345678" class="with-fixed-placeholder"/>
+                <input type="text" placeholder="12345678" name="cellphone" id="cellphone" class="with-fixed-placeholder" maxlength="8"/>
                 <span class="fixed-placeholder">+56 9</span>
-                <span class="error-msg">Tu teléfono no es válido</span>
+                <span class="error-msg hide-item" id="errorCel">Tu teléfono no es válido</span>
               </div>
             </div>
             <div class="row">
@@ -70,24 +73,24 @@
                 <label>E-mail</label>
               </div>
               <div class="col">
-                <input placeholder="nombre@mail.com" />
-                <span class="error-msg">Tu e-mail no es válido</span>
+                <input type="text" placeholder="nombre@mail.com" name="email" id="email" maxlength="50"/>
+                <span class="error-msg hide-item" id="errorMail">Tu e-mail no es válido</span>
               </div>
             </div>
             <div class="row extra-margin-row">
               <div class="col">
                 <label>¿Eres un robot?</label>
               </div>
-              <div class="g-recaptcha" data-sitekey="6LcNGE8UAAAAAIx1cliIKbzssvKhK3n8MuNTiT6-"></div>
+              <!--<div class="g-recaptcha" data-sitekey="6LcNGE8UAAAAAIx1cliIKbzssvKhK3n8MuNTiT6-"></div>-->
             </div>
             <div class="row conditions">
               <input type="checkbox" id="checkbox">
               <label for="checkbox">Acepto que mi información sea utilizada para enviarme promociones.</label>
             </div>
             <div class="row">
-              <button type="submit" class="btn red-btn">Enviar</button>
+              <button type="submit" class="btn grey-btn" id="submit" disabled>Enviar</button>
             </div>
-            <p class="legal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare quam lacus. Ut iaculis nisl sed neque imperdiet, sit amet eleifend lectus condimentum. Vivamus viverra velit semper urna efficitur, vel pellentesque tortor bibendum. Aliquam vitae sem et enim tempor fermentum.</p>
+            <p class="legal">Acumulan doble de Ripley Puntos aquellas compras realizadas con Tarjeta de Crédito Ripley Mastercard, entre el 1 y el 30 de abril de 2018, en establecimientos del rubro “Supermercados” de acuerdo a la clasificación Transbank S.A. Máximo 5.000 Ripley Puntos por cliente. La administración del Programa Ripley Puntos y entrega de sus beneficios es de exclusiva responsabilidad de Comercial ECCSA S.A. Términos y condiciones del Programa en ripleypuntos.cl.</p>
           </form>
         </div>
       </section>
@@ -100,21 +103,9 @@
   </mini-site>
 </body>
 
-<script>
-    $('#form').submit(function(){
-        $.ajax({
-            url: 'post.php',
-            type: 'POST',
-            data : $('#form').serialize(),
-            success: function(data){
-                console.log(data);
-            }, error: function(error){
-                console.log(error);
-            }
-        });
-        event.preventDefault();
-    });
-</script>
+<mini-site-scripts>
+  <script src='js/custom.js'></script>
+</mini-site-scripts>
+
 </html>
-  
-  
+
