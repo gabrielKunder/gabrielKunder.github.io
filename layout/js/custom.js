@@ -6,6 +6,11 @@ function getSearchParams(k){
 
 $("#campaign_id").val(getSearchParams('idCampaign'));
 
+var captcha = false;
+
+function recaptchaCallback() {
+    captcha = true;
+};
 
 $('#form').submit(function(){
     $.ajax({
@@ -41,7 +46,7 @@ function validate() {
         $("#cellphone").val() != "" && isCellPhone($("#cellphone").val()) &&
         $("#email").val() != "" && isEmail($("#email").val()) &&
         $("#checkbox").is(":checked") == true &&
-        grecaptcha && grecaptcha.getResponse().length !== 0){
+        captcha){
         $("#submit").removeAttr("disabled");
         $("#submit").removeClass( "grey-btn" ).addClass( "red-btn" );
     } else {
