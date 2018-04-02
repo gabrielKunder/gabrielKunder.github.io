@@ -35,7 +35,7 @@ $('#form').submit(function(){
         success: function(){
             window.location.href= 'message.html';
         }, error: function(error){
-            if(errors.hasOwnProperty(error.responseJSON.errorCode)){
+            if(errors.hasOwnProperty(error.responseJSON.errorCode)) {
                 alert(error[error.responseJSON.errorCode]);
             } else{
                 alert(error['default']);
