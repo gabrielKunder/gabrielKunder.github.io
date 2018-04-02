@@ -36,11 +36,11 @@ $('#form').submit(function(){
             window.location.href= 'message.html';
         }, error: function(error){
             if(errors.hasOwnProperty(error.responseJSON.errorCode)) {
-                alert(error[error.responseJSON.errorCode]);
+                alert(errors[error.responseJSON.errorCode]);
             } else{
-                alert(error['default']);
+                alert(errors['default']);
             }
-            console.log(error.responseJSON);
+            console.log(error.responseJSON.errorCode);
         }
     });
     event.preventDefault();
