@@ -6,7 +6,7 @@ function getSearchParams(k){
 
 $("#campaign_id").val(getSearchParams('idCampaign'));
 
-var captcha = true;
+var captcha = false;
 
 function recaptchaCallback() {
     captcha = true;
@@ -14,7 +14,7 @@ function recaptchaCallback() {
 
 $('#form').submit(function(){
     $.ajax({
-        url: 'https://ripley-campanas.appspot.com/campaign/get_info/',
+        url: 'https://ripley-campanas.appspot.com/campaign/get/',
         type: 'GET',
         data : $('#form').serialize(),
         success: function(data){
@@ -32,8 +32,8 @@ $('#form').submit(function(){
         url: 'https://ripley-campanas.appspot.com/campaign/add_user/',
         type: 'POST',
         data : $('#form').serialize(),
-        success: function(data){
-            console.log(data);
+        success: function(){
+            window.location.href= 'message.html';
         }, error: function(error){
             console.log(error);
         }
