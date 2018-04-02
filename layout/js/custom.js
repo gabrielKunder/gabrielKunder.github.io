@@ -6,7 +6,7 @@ function getSearchParams(k){
 
 $("#campaign_id").val(getSearchParams('idCampaign'));
 
-var captcha = false;
+var captcha = true;
 
 function recaptchaCallback() {
     captcha = true;
