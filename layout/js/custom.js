@@ -14,7 +14,7 @@ function recaptchaCallback() {
 
 $('#form').submit(function(){
     $.ajax({
-        url: '/',
+        url: 'http://ripley-campanas.appspot.com/campaign/add_user',
         type: 'POST',
         data : $('#form').serialize(),
         success: function(data){
@@ -81,12 +81,6 @@ $("#email").on("change keyup", function(){
     } else{
         $("#errorMail").removeClass( "hide-item" );
     }
-});
-
-$(".recaptcha-checkbox").trigger('attribute-change');
-
-$(".recaptcha-checkbox").on('attribute-change', function(){
-    validate();
 });
 
 $("#checkbox").on("change", function(){
