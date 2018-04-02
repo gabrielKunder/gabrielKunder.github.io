@@ -65,8 +65,7 @@ function validate() {
         $("#first_name").val() != "" && $("#last_name").val() != "" &&
         $("#cellphone").val() != "" && isCellPhone($("#cellphone").val()) &&
         $("#email").val() != "" && isEmail($("#email").val()) &&
-        $("#checkbox").is(":checked") == true &&
-        captcha){
+        $("#checkbox").is(":checked") == true){
         $("#submit").removeAttr("disabled");
         $("#submit").removeClass( "grey-btn" ).addClass( "red-btn" );
     } else {
