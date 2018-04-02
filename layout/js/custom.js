@@ -14,6 +14,21 @@ function recaptchaCallback() {
 
 $('#form').submit(function(){
     $.ajax({
+        url: 'https://ripley-campanas.appspot.com/campaign/get_info/',
+        type: 'GET',
+        data : $('#form').serialize(),
+        success: function(data){
+            console.log(data);
+        }, error: function(error){
+            console.log(error);
+        }
+    });
+    event.preventDefault();
+});
+
+
+$('#form').submit(function(){
+    $.ajax({
         url: 'https://ripley-campanas.appspot.com/campaign/add_user/',
         type: 'POST',
         data : $('#form').serialize(),
