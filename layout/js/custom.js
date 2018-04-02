@@ -14,7 +14,7 @@ function recaptchaCallback() {
 
 $('#form').submit(function(){
     $.ajax({
-        url: 'http://ripley-campanas.appspot.com/campaign/add_user',
+        url: 'https://ripley-campanas.appspot.com/campaign/add_user',
         type: 'POST',
         data : $('#form').serialize(),
         success: function(data){
